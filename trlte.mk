@@ -138,8 +138,8 @@ PRODUCT_PACKAGES += \
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
     fingerprintd \
-    fingerprint.apq8084 \
-    ValidityService
+    fingerprint.apq8084 
+#    ValidityService
 
 # GPS
 PRODUCT_PACKAGES += \
