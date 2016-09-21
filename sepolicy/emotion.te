@@ -26,6 +26,26 @@ allow priv_app device:dir open;
 
 #============= rild ==============
 allow rild default_prop:property_service set;
+allow rild adsprpcd:file { getattr open read };
+allow rild debuggerd:file { getattr open read };
+allow rild healthd:file { getattr open read };
+allow rild init:file { getattr open read };
+allow rild kernel:file { getattr open read };
+allow rild lmkd:file { getattr open read };
+allow rild logd:file { getattr open read };
+allow rild mdm_helper:file { getattr open read };
+allow rild rfs_access:file { getattr open read };
+allow rild sensorhubservice:file { getattr open read };
+allow rild servicemanager:file { open read };
+allow rild surfaceflinger:file { getattr open read };
+allow rild system_data_file:dir { add_name remove_name setattr write };
+allow rild system_data_file:sock_file { create setattr unlink };
+allow rild tee:file { getattr open read };
+allow rild ueventd:file { getattr open read };
+allow rild vold:file { getattr open read };
+
+#============= shell ==============
+allow shell rild_exec:file { execute execute_no_trans getattr open read };
 
 #============= sensorhubservice ==============
 allow sensorhubservice device:chr_file { read write };
@@ -46,3 +66,7 @@ allow thermal-engine self:netlink_kobject_uevent_socket read;
 # allow vcs ion_device:chr_file read; 
 # allow vcs ion_device:chr_file open;
 # allow vcs ion_device:chr_file ioctl;
+
+#============= vold ==============
+allow vold self:capability sys_resource;
+
