@@ -43,6 +43,6 @@ allow thermal-engine self:capability net_admin;
 allow thermal-engine self:netlink_kobject_uevent_socket read;
 
 #============= vcs ==============
-allow vcs ion_device:chr_file read; 
-allow vcs ion_device:chr_file open;
-allow vcs ion_device:chr_file ioctl;
+# allow vcs ion_device:chr_file read; 
+# allow vcs ion_device:chr_file open;
+# allow vcs ion_device:chr_file ioctl;

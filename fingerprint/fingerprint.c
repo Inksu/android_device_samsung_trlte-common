@@ -68,7 +68,6 @@ int sensor_uninit() {
     sensor.init = false;
     return ret;
 }
->>>>>>> 2f41fd2... klte: Use new Fingerprint Hal without ValidityService
 
 int sensor_init() {
     ALOGV("----------------> %s ----------------->", __FUNCTION__);
