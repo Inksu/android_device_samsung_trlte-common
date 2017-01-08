@@ -7,3 +7,6 @@ allow system_app lcd_dev:file rw_file_perms;
 allow system_app vibe_dev:file rw_file_perms;
 allow system_app input_device:dir r_dir_perms;
 allow system_app input_device:chr_file rw_file_perms;
+allow system_app self:process ptrace;
+allow system_app sensorhubservice:binder call;
+allow system_app fingerprintd:binder call;
