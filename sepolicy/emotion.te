@@ -74,6 +74,7 @@ allow untrusted_app cgroup:dir read;
 allow untrusted_app cgroup:dir open;
 allow untrusted_app cm_status_bar_service:service_manager find;
 allow untrusted_app sysfs:file read;
+allow untrusted_app mnt_media_rw_file:dir getattr;
 
 #========= isolated_app ========
 allow isolated_app shell_data_file:dir search;
