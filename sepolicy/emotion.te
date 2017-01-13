@@ -74,8 +74,3 @@ allow untrusted_app cgroup:dir read;
 allow untrusted_app cgroup:dir open;
 allow untrusted_app cm_status_bar_service:service_manager find;
 allow untrusted_app sysfs:file read;
-
-#============= vcs ==============
-allow vcs ion_device:chr_file read; 
-allow vcs ion_device:chr_file open;
-allow vcs ion_device:chr_file ioctl;
